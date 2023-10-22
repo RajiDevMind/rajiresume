@@ -1,0 +1,343 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-2: hsl(205, 77%, 27%);
+  --clr-primary-3: hsl(205, 72%, 37%);
+  --clr-primary-4: hsl(205, 63%, 48%);
+  /* primary/main color */
+  --clr-primary-5: #49a6e9;
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(205, 89%, 70%);
+  --clr-primary-7: hsl(205, 90%, 76%);
+  --clr-primary-8: hsl(205, 86%, 81%);
+  --clr-primary-9: hsl(205, 90%, 88%);
+  --clr-primary-10: hsl(205, 100%, 96%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-gold: #c59d5f;
+  --clr-black: #222;
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.3rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ff-secondary);
+  height: 100vh;
+  background: url("./images/laptopimg.avif") center/cover no-repeat;
+  /* background: var(--clr-grey-10); */
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: var(--clr-white);
+}
+/* img:not(.logo) {
+  width: 100%;
+}
+img {
+  display: block;
+} */
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  /* margin-bottom: 0.75rem; */
+  font-family: var(--ff-primary);
+}
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-grey-5);
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+@media screen and (max-width: 1164px) {
+  .hero-img img {
+    max-width: 350px;
+  }
+}
+@media screen and (max-width: 800px) {
+  body {
+    overflow-x: hidden;
+  }
+  .hero-text {
+    display: block;
+    text-align: center;
+    max-width: 100%;
+  }
+  .hero-img img {
+    display: none;
+  }
+
+  .wework button {
+    display: none;
+  }
+}
+@media and screen (max-width: 650px) {
+  .overlay-container {
+    /* width: 500px !important;
+    height: 250px;
+    max-width: var(--fixed-width); */
+  }
+  .overlay-container video {
+    /* justify-content: center; */
+  }
+}
+.wework {
+  animation: bounce 2s ease-in-out infinite;
+  overflow-x: hidden;
+  display: grid;
+  place-items: center;
+}
+.nav {
+  max-width: 100%;
+  min-height: 50px;
+  background: var(--clr-primary-5);
+  margin-bottom: 24px;
+}
+/* global classes */
+.btn {
+  text-transform: uppercase;
+  /* background: transparent; */
+  color: var(--clr-black);
+  margin-top: 0.4rem;
+  padding: 0.375rem 0.75rem;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  transition: var(--transition);
+  font-size: 0.875rem;
+  border: 2px solid var(--clr-white);
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+}
+.btn:hover {
+  color: var(--clr-white);
+  background: var(--clr-black);
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  /* height: 100%; */
+  background: rgba(73, 166, 233, 0.5);
+  display: grid;
+  place-items: center;
+  transition: var(--transition);
+  visibility: hidden;
+  z-index: -10;
+}
+.open-modal {
+  visibility: visible;
+  z-index: 10;
+}
+.overlay-container {
+  background: var(--clr-primary-10);
+  border-radius: var(--radius);
+  width: 900px;
+  height: 420px;
+  max-width: var(--fixed-width);
+  text-align: center;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.overlay-container video {
+  border-radius: var(--radius);
+  max-width: 100%;
+}
+
+.close-btn {
+  position: absolute;
+  top: -0.01rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: transparent;
+  border-color: transparent;
+  color: var(--clr-red-dark);
+  cursor: pointer;
+  transition: var(--transition);
+
+  animation: bounce 2s ease-in-out infinite;
+}
+.close-btn:hover {
+  color: var(--clr-red-light);
+  transform: scale(1.3);
+}
+body {
+  overflow-x: hidden;
+}
+
+.hero-img {
+  /* margin-right: 70px; */
+  animation: bounce 2s ease-in-out infinite;
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+.hero-img img {
+  max-width: 300px;
+  transform: rotate(-27deg);
+}
+.section {
+  display: grid;
+  position: relative;
+}
+.hero {
+}
+.hero-text {
+  position: absolute;
+  top: 320px;
+  left: 10px;
+  background: rgb(155, 216, 255, 0.5);
+  padding: 20px;
+  margin-right: 10px;
+  color: rgb(255, 255, 255);
+  border-radius: var(--radius);
+  text-shadow: 0 2px 5px black;
+}
+.hero-img {
+  position: absolute;
+  top: 10px;
+  right: 200px;
+}
+
+// switch btn
+.switch-btn {
+  position: absolute;
+  bottom: 7%;
+  left: 7%;
+  width: 10rem;
+  height: 2rem;
+  display: flex;
+  border-radius: var(--radius);
+  align-items: center;
+  justify-content: space-around;
+  border: none;
+  transition: var(--transition);
+}
+.switch-btn span {
+  /* display: inline-block; */
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-transform: capitalize;
+  color: var(--clr-primary-5);
+}
+.switch {
+  position: absolute;
+  width: 11%;
+  height: 7%;
+  bottom: 13px;
+  left: 185px;
+  background: var(--clr-primary-5);
+  border-radius: var(--radius);
+  margin: 0;
+  display: block;
+  transition: var(--transition);
+}
+.slide .switch {
+  left: 42%;
+}
