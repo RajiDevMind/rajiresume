@@ -59,12 +59,14 @@
     max-width: 100%;
   }
   .title {
-    width: 25rem;
+    width: 100%;
     margin-bottom: 1rem;
   }
   .btn {
-    min-width: 15px;
-    padding: 0;
+    min-width: 20px;
+    display: flex;
+    padding-right: 35px;
+    align-items: center;
     font-size: 0.555rem;
   }
   .experience {
@@ -77,13 +79,23 @@
     display: none;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .sections {
+    width: 100%;
+  }
+  .about-img img {
+    max-width: 85%;
+    margin: 0;
+  }
+}
 .about-img img {
   border-radius: var(--radius);
   object-fit: cover;
   width: 25rem;
 }
 .title p {
-  width: 50%;
+  width: 90%;
   margin: 0 auto;
   color: white;
   text-shadow: 2px 3px 5px #cccccc;
