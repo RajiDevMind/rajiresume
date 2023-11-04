@@ -4,7 +4,7 @@
 
 .sections {
   padding: 2rem 0;
-  /* margin: 0 auto; */
+  margin: 0 auto;
   align-items: center;
   display: grid;
   place-items: center;
@@ -12,6 +12,7 @@
 
 .title {
   text-align: center;
+
   margin-bottom: 4rem;
   color: var(--clr-white);
 }
@@ -31,7 +32,7 @@
   max-width: 100%;
   margin: 0;
 }
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 800px) {
   .sections {
     margin: 0;
   }
@@ -62,6 +63,10 @@
     width: 100%;
     margin-bottom: 1rem;
   }
+  .title button {
+    margin: 0 auto;
+    padding: 10px;
+  }
   .btn {
     min-width: 20px;
     display: flex;
@@ -71,9 +76,6 @@
   }
   .experience {
     visibility: hidden;
-    width: 0;
-    /* padding: 0;
-    margin: 0; */
   }
   .btn-container {
     display: none;
