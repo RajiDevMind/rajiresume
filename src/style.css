@@ -47,7 +47,7 @@ Variables
   --ff-primary: "Roboto", sans-serif;
   --ff-secondary: "Open Sans", sans-serif;
   --transition: all 0.3s linear;
-  --spacing: 0.25rem;
+  --spacing: 0.15rem;
   --radius: 0.3rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -308,4 +308,21 @@ body {
 }
 .top-link:hover a {
   color: var(--clr-primary-1);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2rem;
+}
+.social-icons a {
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: var(--spacing);
+
+  color: var(--clr-primary-9);
+  transition: var(--transition);
+}
+.social-icons a:hover {
+  color: var(--clr-black);
 }
