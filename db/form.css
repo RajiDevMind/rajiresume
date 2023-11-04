@@ -1,7 +1,4 @@
-<<<<<<< HEAD h3 {
-  color: var(--clr-white);
-}
-=======>>>>>>>b74b90169641a83516509f9210ae79c31f386064 .container {
+.container {
   width: 80%;
   margin: auto;
   margin-top: 50px;
@@ -9,6 +6,15 @@
   padding: 10px;
   border-radius: var(--radius);
   font-size: 20px;
+}
+h3 {
+  color: var(--clr-white);
+  text-align: center;
+}
+label {
+  color: var(--clr-white);
+  padding-left: 5px;
+  text-shadow: 0px 5px 20px black;
 }
 form {
   font-family: Arial, sans-serif;
