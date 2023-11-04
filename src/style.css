@@ -312,16 +312,8 @@ body {
 
 .social-icons {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 1em 2rem;
-}
-.social-icons a {
-  font-size: 1.2rem;
-  font-weight: 500;
-  letter-spacing: var(--spacing);
-
-  color: var(--clr-primary-9);
-  transition: var(--transition);
 }
 .social-icons a:hover {
   color: var(--clr-black);
