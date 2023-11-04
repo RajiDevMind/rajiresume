@@ -312,8 +312,8 @@ body {
 
 .social-icons {
   display: flex;
-  justify-content: space-between;
-  padding: 1em 2rem;
+  justify-content: space-around;
+  padding: 0.5rem;
 }
 .social-icons a:hover {
   color: var(--clr-black);
