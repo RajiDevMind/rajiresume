@@ -291,3 +291,20 @@ body {
   top: 10px;
   right: 200px;
 }
+
+.top-link {
+  font-size: 1rem;
+  position: fixed;
+  bottom: 1rem;
+  right: 7rem;
+  padding: 0.3rem;
+  box-shadow: var(--dark-shadow);
+  border-radius: var(--radius);
+  color: var(--clr-black);
+  cursor: pointer;
+
+  animation: bounce 2s ease-in-out infinite;
+}
+.top-link:hover a {
+  color: var(--clr-primary-1);
+}
