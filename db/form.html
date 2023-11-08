@@ -16,12 +16,24 @@
           type="text"
           id="name"
           placeholder="Business Name or Personal Name"
+          required
         /><br />
         <label for="email">Email:</label><br />
-        <input type="email" id="email" placeholder="your@mail.com" /><br />
+        <input
+          type="email"
+          id="email"
+          placeholder="your@mail.com"
+          required
+        /><br />
         <label for="message">Message:</label><br />
-        <textarea id="message"></textarea><br />
+        <textarea
+          id="message"
+          placeholder="kindly include your whatsApp contact!"
+          required
+        ></textarea
+        ><br />
         <input type="submit" value="Send" />
+        <div class="notice"></div>
       </form>
       <button class="scroll-link top-link">
         <a href="../index.html"> Home </a>

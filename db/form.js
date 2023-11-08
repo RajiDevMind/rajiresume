@@ -2,6 +2,7 @@ const contactForm = document.getElementById("contactForm");
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
 const msgInput = document.getElementById("message");
+const notice = document.querySelector(".notice");
 
 contactForm.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -16,7 +17,17 @@ contactForm.addEventListener("submit", async (e) => {
       message: msgInput.value,
     }),
   });
+
   nameInput.value = "";
   emailInput.value = "";
   msgInput.value = "";
+
+  navigator.vibrate(500);
+  notice.textContent = "Raji will get to you soon!!!";
+  notice.classList.add("notify");
+
+  setTimeout(function () {
+    notice.textContent = "";
+    notice.classList.remove("notify");
+  }, 2000);
 });

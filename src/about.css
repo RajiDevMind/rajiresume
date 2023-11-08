@@ -121,9 +121,10 @@
   width: 99%;
 }
 .title p {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   color: white;
+  padding-bottom: 10px;
   text-shadow: 2px 3px 5px #cccccc;
 }
 .about {
