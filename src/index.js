@@ -2,7 +2,6 @@ import express from "express";
 import { z, ZodError } from "zod";
 
 import accessGoogleSheets, { SHEET_ID } from "./contactSheet.js";
-console.log(accessGoogleSheets);
 
 const app = express();
 

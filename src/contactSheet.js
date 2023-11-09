@@ -1,7 +1,6 @@
 import { google } from "googleapis";
 
 import key from "../secrets.json" assert { type: "json" };
-console.log(key.type);
 
 export const SHEET_ID = "1i3tVwmrH_Ey7Mt4sBDaYs604ySTe_Qb9X5wBaM8AZZk";
 
