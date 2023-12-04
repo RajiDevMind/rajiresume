@@ -31,3 +31,13 @@ contactForm.addEventListener("submit", async (e) => {
     notice.classList.remove("notify");
   }, 2000);
 });
+
+// loading
+window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader");
+  loader.classList.add("loader-hidden");
+
+  loader.addEventListener("transitionend", () => {
+    document.body.removeChild("loader");
+  });
+});

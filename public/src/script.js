@@ -17,16 +17,13 @@ closeBtn.addEventListener("click", function () {
   overlay.classList.remove("open-modal");
 });
 
-// switchbtn and pause video
-const switchBtn = document.querySelector(".switch-btn");
-const videoContainer = document.querySelector(".video-container");
+// loading
 
-switchBtn.addEventListener("click", function () {
-  if (!switchBtn.classList.contains("slide")) {
-    switchBtn.classList.add("slide");
-    videoContainer.pause();
-  } else {
-    switchBtn.classList.remove("slide");
-    videoContainer.play();
-  }
+window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader");
+  loader.classList.add("loader-hidden");
+
+  loader.addEventListener("transitionend", () => {
+    document.body.removeChild("loader");
+  });
 });
