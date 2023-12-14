@@ -3,18 +3,24 @@ const projects = [
     img: "./images/logistics.jpg",
     url: "https://rajidevmind.github.io/logistics/",
     title: "Logistics Agency",
-    desc: "Logistics services in airline services",
+    desc: "Logistics services in airline services. Built with vanilla JS, Hosted on Github pages",
+  },
+  {
+    img: "./images/getfit.jpg",
+    url: "https://animated-figolla-ea63a9.netlify.app/",
+    title: "Club House",
+    desc: "A gyming center that provide profession body fitness services. Built with reactJs, hosted on netlify",
   },
   {
     img: "./images/SOURCE.jpg",
     url: "https://rajidevmind.github.io/Source-Creations/",
     title: "Source-Creations",
-    desc: "advertising showcasing pro services",
+    desc: "advertising showcasing pro services. Built with vanilla JS, Hosted on Github pages",
   },
 ];
 const container = document.querySelector(".containers");
 
-// display projects to the dom
+// mapping and display projects to the dom
 container.innerHTML = projects.map((box) => {
   const { img, title, url, desc } = box;
   return `<div class="box">
