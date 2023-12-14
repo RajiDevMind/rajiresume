@@ -1,8 +1,7 @@
 // project styles
-div.container {
-  max-width: 400px;
+.containers {
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
 }
 .sections h1 {
   text-align: center;
@@ -10,11 +9,20 @@ div.container {
   margin: 20px 0;
 }
 .box img {
-  width: 350px;
+  max-width: 350px;
 }
 .box {
   margin: 5px;
   max-width: 350px;
-  min-height: 250px;
   background: var(--clr-primary-9);
+}
+.box-text h2 {
+  font-size: 1.3rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+@media (max-width: 500px) {
+  .box {
+    margin: 5px auto;
+  }
 }
