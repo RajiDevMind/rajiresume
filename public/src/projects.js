@@ -1,5 +1,11 @@
 const projects = [
   {
+    img: "./images/oncampus.PNG",
+    url: "https://bit.ly/campus_updates",
+    title: "Social Connecting App",
+    desc: "a social app that allow user to create post and chat with one another. Built with vanilla JS, Hosted on Netlify",
+  },
+  {
     img: "./images/logistics.jpg",
     url: "https://rajidevmind.github.io/logistics/",
     title: "Logistics Agency",
