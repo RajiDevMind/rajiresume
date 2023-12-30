@@ -1,5 +1,6 @@
 import express from "express";
 import { z, ZodError } from "zod";
+import sendEmailNotification from "..//src/utils/sendMail.js";
 
 import accessGoogleSheets, { SHEET_ID } from "./contactSheet.js";
 
@@ -7,12 +8,12 @@ const app = express();
 
 // Data schema validation with zod
 const contactForm = z.object({
-  name: z.string().min(1, { message: "name is required" }),
+  username: z.string().min(1, { message: "name is required" }),
   email: z.string().email(),
   message: z
     .string()
     .min(4, { message: "message is required?" })
-    .max(500, { message: `Message can't exceed 500 characters!` }),
+    .max(1000, { message: `Message can't exceed 1000 characters!` }),
 });
 
 app.use(express.json());
@@ -36,6 +37,9 @@ app.post("/message", async (req, res) => {
         values: [rowsResponseValues],
       },
     });
+    // send mail func call
+    const { username, email } = response;
+    sendEmailNotification(username, email);
     res.json({ message: "Message added succcessfully!" });
   } catch (err) {
     if (err instanceof ZodError) {
