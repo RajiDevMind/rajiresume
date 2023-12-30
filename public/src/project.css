@@ -1,7 +1,18 @@
 // project styles
+
+.sections {
+  display: flex;
+  max-width: 100%;
+}
+.div-container {
+  display: flex;
+  max-width: 100%;
+}
+
 .containers {
   display: flex;
   flex-direction: row;
+  flex-grow: inherit;
 }
 .sections h1 {
   text-align: center;
@@ -24,5 +35,9 @@
 @media (max-width: 500px) {
   .box {
     margin: 5px auto;
+  }
+  .containers {
+    margin: 5px auto;
+    flex-direction: column;
   }
 }
