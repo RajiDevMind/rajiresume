@@ -1,5 +1,11 @@
 const projects = [
   {
+    img: "./images/SelloutLogo.png",
+    url: "https://selloutapp.vercel.app",
+    title: "Sellout is an e-commerce",
+    desc: "Sellout app is designed to streamline online shopping. Built with ReactJS, Hosted on Vercel",
+  },
+  {
     img: "./images/oncampus.PNG",
     url: "https://bit.ly/campus_updates",
     title: "Social Connecting App",
