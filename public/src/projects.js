@@ -1,4 +1,4 @@
-export default projects = [
+export const projects = [
   {
     img: "./images/SelloutLogo.png",
     url: "https://selloutapp.vercel.app",

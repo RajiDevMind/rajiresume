@@ -61,6 +61,7 @@ export default function loadingState() {
     });
   });
 }
+
 loadingState();
 
 // ********** close links ************
@@ -82,13 +83,12 @@ navToggle.addEventListener("click", function () {
 
 // const container = document.querySelector(".project-disp");
 const container = document.querySelector(".project-containers");
-console.log(container);
 // mapping and display projects to the dom
-container.innerHTML = projects.map((box) => {
+container.innerHTML = projects.map((box, index) => {
+  // <img src="${img}" alt="" loading="lazy" />
   const { img, title, url, desc } = box;
-  return `<div class="box">
+  return `<div class="box" key="${index}">
     <a target="_blank" href="${url}">
-      <img src="${img}" alt="" loading="lazy" />
       <div class="box-text">
         <h2>${title}</h2>
         <p>${desc}</p>

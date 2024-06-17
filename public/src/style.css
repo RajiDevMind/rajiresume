@@ -474,7 +474,7 @@ nav {
 .introduction {
   margin-top: 0.9rem;
   position: absolute;
-  bottom: -800px;
+  bottom: -770px;
 
   left: 10px;
   background: rgb(155, 216, 255, 0.5);
@@ -488,5 +488,8 @@ nav {
 
 .project-containers {
   position: absolute;
-  bottom: -1550px;
+  bottom: -1520px;
+}
+.project-containers .box {
+  padding: 10px;
 }
