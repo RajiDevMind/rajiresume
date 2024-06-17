@@ -156,6 +156,13 @@ p {
   .wework button {
     display: none;
   }
+  .home-btns {
+    display: flex;
+    justify-content: space-between;
+  }
+  .btn {
+    margin: 0 2px;
+  }
 }
 @media and screen (max-width: 650px) {
   .overlay-container {
@@ -462,4 +469,24 @@ nav {
   .links a:hover {
     color: var(--clr-white);
   }
+}
+
+.introduction {
+  margin-top: 0.9rem;
+  position: absolute;
+  bottom: -800px;
+
+  left: 10px;
+  background: rgb(155, 216, 255, 0.5);
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  color: rgb(255, 255, 255);
+  border-radius: var(--radius);
+  text-shadow: 0 2px 5px black;
+}
+
+.project-containers {
+  position: absolute;
+  bottom: -1550px;
 }

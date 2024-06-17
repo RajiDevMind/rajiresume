@@ -30,7 +30,7 @@
 }
 .box {
   margin: 5px;
-  max-width: 90%;
+  max-width: 95%;
   background: var(--clr-primary-9);
   border-radius: var(--radius);
 }
