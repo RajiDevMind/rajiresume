@@ -1,4 +1,4 @@
-export const projects = [
+const projects = [
   {
     img: "./images/SelloutLogo.png",
     url: "https://selloutapp.vercel.app",
