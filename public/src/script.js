@@ -2,6 +2,39 @@ const overlay = document.querySelector(".overlay");
 const btn = document.querySelector(".popup");
 const btnS = document.querySelector(".popups");
 
+const projects = [
+  {
+    img: "./images/SelloutLogo.png",
+    url: "https://selloutapp.vercel.app",
+    title: "Sellout is an e-commerce",
+    desc: "Sellout app is designed to streamline online shopping. Built with ReactJS, Hosted on Vercel",
+  },
+  {
+    img: "./images/oncampus.PNG",
+    url: "https://bit.ly/campus_updates",
+    title: "Social Connecting App",
+    desc: "a social app that allow user to create post and chat with one another. Built with vanilla JS, Hosted on Netlify",
+  },
+  {
+    img: "./images/logistics.jpg",
+    url: "https://rajidevmind.github.io/logistics/",
+    title: "Logistics Agency",
+    desc: "Logistics services in airline services. Built with vanilla JS, Hosted on Github pages",
+  },
+  {
+    img: "./images/getfit.jpg",
+    url: "https://animated-figolla-ea63a9.netlify.app/",
+    title: "Club House",
+    desc: "A gyming center that provide profession body fitness services. Built with reactJs, hosted on netlify",
+  },
+  {
+    img: "./images/SOURCE.jpg",
+    url: "https://rajidevmind.github.io/Source-Creations/",
+    title: "Source-Creations",
+    desc: "advertising showcasing pro services. Built with vanilla JS, Hosted on Github pages",
+  },
+];
+
 const closeBtn = document.querySelector(".close-btn");
 
 btnS.addEventListener("click", function () {
@@ -46,4 +79,20 @@ navToggle.addEventListener("click", function () {
   } else {
     linksContainer.style.height = 0;
   }
+});
+
+// const container = document.querySelector(".project-disp");
+const container = document.querySelector(".project-containers");
+// mapping and display projects to the dom
+container.innerHTML = projects.map((box, index) => {
+  // <img src="${img}" alt="" loading="lazy" />
+  const { img, title, url, desc } = box;
+  return `<div class="box" key="${index}">
+    <a target="_blank" href="${url}">
+      <div class="box-text">
+        <h2>${title}</h2>
+        <p>${desc}</p>
+      </div>
+    </a>
+  </div>`;
 });
